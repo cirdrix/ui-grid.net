@@ -1,0 +1,16 @@
+﻿<div ng-app="app">
+    <div ng-controller="MainCtrl" ng-cloak>
+        You can use asterisks to fuzz-match, i.e. use "*z*" as your filter to show any row where that column contains a "z".
+        <br>
+        <br>
+        <strong>Note:</strong> The third column has the filter input disabled, but actually has a filter set in code that requires every company to have an 'a' in their name.
+        <br>
+        <br>
+        <button id="toggleFiltering" ng-click="toggleFiltering()" class="btn btn-success">Toggle Filtering</button>
+        <button id="showSelected" ng-click="showSelected()" class="btn btn-success">Show Selected</button>
+        <div id="grid1" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="grid"></div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/app.js"></script>
+}
